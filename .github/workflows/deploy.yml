@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --local user.name "${GITHUB_USER}"
           git config --local user.email "${GITHUB_EMAIL}"
-          git remote set-url origin git@github.com:kikagaku/corporate.git
+          git remote set-url origin git@github.com:kikagaku/stein.git
           git add -f docs
           git add .
           git commit -m "auto rebuilding site"
