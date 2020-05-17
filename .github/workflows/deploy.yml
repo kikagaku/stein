@@ -2,6 +2,8 @@ name: Auto Build
 on:
   push:
     branches: [ deploy ]
+  repository_dispatch:
+    type: [ build ]
 
 jobs:
   build:
