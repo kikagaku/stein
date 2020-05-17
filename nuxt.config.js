@@ -39,7 +39,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    'bootstrap-vue/Nuxt'
+    'bootstrap-vue/nuxt'
   ],
   /*
   ** Build configuration
