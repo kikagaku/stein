@@ -1,6 +1,10 @@
+const base_url = 'http://localhost:3000'
 
 export default {
   mode: 'universal',
+  env: {
+    base_url: base_url
+  },
   /*
   ** Headers of the page
   */
@@ -34,8 +38,8 @@ export default {
     ],
     script: [
       { src: 'https://code.jquery.com/jquery-2.2.4.min.js', integrity: 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin: 'anonymous' },
-      { src: 'http://localhost:3000/js/modaal.min.js' },
-      { src: 'http://localhost:3000/js/common.js' },
+      { src: `${base_url}/js/modaal.min.js` },
+      { src: `${base_url}/js/common.js` },
     ],
   },
   /*
@@ -63,6 +67,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
   ],
   /*
   ** Build configuration

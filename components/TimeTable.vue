@@ -3,39 +3,40 @@
     <div class="time-table-sinner">
       <h2 class="time-table-title">TIME TABLE</h2>
       <div class="track-seed-wrapper">
+
+        <!-- Hackathon -->
         <div class="hackathon-detail">
-          <a href="#hackathon" class="modal">
+          <a :href='addId(data_hk.id)' class="modal">
             <p class="session-tag hackathon">Hackathon</p>
-            <p class="session-title">脱CIFAR-10 専門家からDNN構築のプロセスが学べるハッカソン</p>
+            <p class="session-title">{{data_hk.タイトル}}</p>
             <p class="speaker-name">
-              あなたの深層学習プロジェクト、例題で止まっていませんか？様々なデータを使って深層学習を使った分析を進めたり、精度をあげる方法が学べるハッカソン
+              {{data_hk.概要}}
             </p>
             <p class="enroll-hack conference">
-              <a href="https://connpass.com/event/87532/" target="_blank" class="hack">ハッカソン<br>申し込みはこちら</a>
+              <a :href='data_hk.URL' target="_blank" class="hack">ハッカソン<br>申し込みはこちら</a>
             </p>
           </a>
         </div>
-
-        <div id="hackathon" class="none modal-wrapper">
+        <div :id='data_hk.id' class="none modal-wrapper">
           <p class="session-tag trackd">Hackathon</p>
           <div class="flex-space-between">
             <div class="datetime-modal">
               <div class="datetime-inner">
-                <p>13:00</p>
+                <p>{{data_hk.開始時刻}}</p>
                 <p>|</p>
-                <p>17:40</p>
+                <p>{{data_hk.終了時刻}}</p>
               </div>
             </div>
 
             <div class="session-detail">
               <ul class="sns-session">
                 <li>
-                  <a href="http://twitter.com/share?url=http://dllab.ai/dllab-day-2018/hackathon&amp;text=脱CIFAR-10 専門家からDNN構築のプロセスが学べるハッカソン&amp;hashtags=dllab" target="_blank">
+                  <a :href='addTwitterLink(data_hk.id, data_hk.タイトル)' target="_blank">
                     <i class="fa fa-twitter" aria-hidden="true"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="http://www.facebook.com/share.php?u=http://dllab.ai/dllab-day-2018/hackathon/" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">
+                  <a :href='addFacebookLink(data_hk.id, data_hk.タイトル)' target="_blank">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                   </a>
                 </li>
@@ -43,33 +44,11 @@
 
               <p class="tag trackhack">Hackathon</p>
               <h3 class="session-title">
-                脱CIFAR-10 専門家からDNN構築のプロセスが学べるハッカソン
+                {{data_hk.タイトル}}
               </h3>
               <p class="description">
-                あなたの深層学習プロジェクト、例題で止まっていませんか？様々なデータを使って深層学習を使った分析を進めたり、精度をあげる方法が学べるハッカソン<br><br>
-
-                進め方<br>
-                - CVチームと、NLPチームに分かれます（申込時のアンケートでご記入ください）<br>
-                - 5人1組でチームに分かれます（機械学習歴でバランスよくチームが組めるよう運営側で分けます）<br>
-                - 各チームに課題・データセット・Azure GPU環境が与えられます。課題に対する精度を各チームで競います。<br>
-                - ハッカソン自体は13時開始、17時終わりです。4時間の間に一度休憩を取り、各チーム専門家に1つ質問ができます。質問は全チームが聞く中で行われます。<br>
-                - 17-18時は各チームの成果発表（2分ずつ）、その後、専門家からベストプラクティスを紹介いただきます。<br>
-                - 優秀チームはナイトイベント壇上で表彰します。賞品もあり。<br><br>
-
-                学ぶことができるもの<br>
-                - Example から一歩進んで、実際に深層学習を使う方法を学ぶことができる<br>
-                - 機械学習の解析のプロセスを、自分のやり方と専門家のやり方を比較し学ぶことができる<br><br>
-
-                こんな方が対象です<br>
-                - 事前課題をこなせる人（Pythonを用いたNNプログラミング、Chainer入門）<br>
-                - CV側参加者：OpenCV使ったことある人<br>
-                - NLP側参加者：Mecab使ったことある人<br><br>
-
-                運営側から提供するもの<br>
-                - 各分野の専門家・TA<br>
-                - Azure GPU計算環境<br>
-                - 課題、ベースとなるNNモデル<br>
-                - お菓子、飲み物<br>
+                {{data_hk.概要}}<br><br>
+                <span v-html='data_hk.説明' />
               </p>
             </div>
           </div>
@@ -81,6 +60,7 @@
           <li>Track 3</li>
           <li>Hackathon</li>
         </ul>
+        
         <ul class="track-detail flex-start">
           <li class="datetime open-time">
             <p>09:00</p>
@@ -1213,3 +1193,25 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+	props: [
+		'data_hk'
+	],
+	methods: {
+		addId(id) {
+			return '#' + id
+		},
+		addImage(image_url) {
+			return process.env.base_url + '/' + image_url
+		},
+		addTwitterLink(id, title) {
+			return `http://twitter.com/share?url=http://dllab.ai/dllab-day-2018/${id}&amp;text=${title}&amp;hashtags=dllab`
+		},
+		addFacebookLink(id, title) {
+			return `http://www.facebook.com/share.php?u=http://dllab.ai/dllab-day-2018/${id}/`
+		}
+	}
+}
+</script>

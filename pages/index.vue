@@ -1,10 +1,14 @@
 <template>
   <div>
     <page-header />
-    <first-view />
-    <concept />
-    <speakers />
-    <time-table />
+    <first-view
+      :data='data_fv' />
+    <concept
+      :data='data_cn'/>
+    <speakers
+      :data='data_sp' />
+    <time-table
+      :data_hk='data_hk' />
     <time-table-sp />
     <attention />
     <booth-sponsor />
@@ -16,6 +20,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import PageHeader from '~/components/PageHeader.vue'
 import FirstView from '~/components/FirstView.vue'
 import Concept from '~/components/Concept.vue'
@@ -44,8 +49,29 @@ export default {
     MediaSponsor,
     PageFooter,
   },
+  async asyncData() {
+    // FirstView
+    const url_fv = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/FirstView')
+    const data_fv = await axios.get(url_fv).then((res) => { return res.data[0] })
+    // Concept
+    const url_cn = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Concept')
+    const data_cn = await axios.get(url_cn).then((res) => { return res.data[0] })
+    // Speaker
+    const url_sp = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Speaker')
+    const data_sp = await axios.get(url_sp).then((res) => { return res.data })
+    // Hackathon
+    const url_hk = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Hackathon')
+    const data_hk = await axios.get(url_hk).then((res) => { return res.data[0] })
+    // Data
+    return {
+      data_fv: data_fv,
+      data_cn: data_cn,
+      data_sp: data_sp,
+      data_hk: data_hk,
+    }
+  },
   mounted() {
-    
+
     $('.modal').modaal({
 			// type: 'ajax',	// コンテンツのタイプを指定
 			animation_speed: '500', 	// アニメーションのスピードをミリ秒単位で指定
