@@ -1,6 +1,9 @@
 # dllab-jdla-2020
 
-> My transcendent Nuxt.js project
+## DLLAB & JDLA の Web サイト
+
+更新のためのデータベースは[こちら](https://docs.google.com/spreadsheets/d/1sZui82jKnHuz8MeVaKe3VQUzodwxRXsxX90S390hGB0/edit#gid=178422270)
+
 
 ## Build Setup
 
