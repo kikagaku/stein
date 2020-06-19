@@ -8,10 +8,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "server": "http-server ./docs -o -p 8000"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
+    "http-server": "^0.12.3",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {}

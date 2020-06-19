@@ -8,11 +8,14 @@
     <speakers
       :data='data_sp' />
     <time-table
-      :data_hk='data_hk' />
-    <time-table-sp />
+      :data_tr1='data_tr1'
+      :data_tr2='data_tr2'
+      :data_tr3='data_tr3'
+      :data_tr4='data_tr4' />
+    <!-- <time-table-sp /> -->
     <attention />
-    <booth-sponsor />
-    <member />
+    <!-- <booth-sponsor /> -->
+    <!-- <member /> -->
     <overview />
     <media-sponsor />
     <page-footer />
@@ -59,15 +62,27 @@ export default {
     // Speaker
     const url_sp = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Speaker')
     const data_sp = await axios.get(url_sp).then((res) => { return res.data })
-    // Hackathon
-    const url_hk = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Hackathon')
-    const data_hk = await axios.get(url_hk).then((res) => { return res.data[0] })
+    // Track1
+    const url_tr1 = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Track1')
+    const data_tr1 = await axios.get(url_tr1).then((res) => { return res.data })
+    // Track2
+    const url_tr2 = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Track2')
+    const data_tr2 = await axios.get(url_tr2).then((res) => { return res.data })
+    // Track3
+    const url_tr3 = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Track3')
+    const data_tr3 = await axios.get(url_tr3).then((res) => { return res.data })
+    // Track4
+    const url_tr4 = encodeURI('https://api.steinhq.com/v1/storages/5eeb28ac83c30d0425e2c504/Track4')
+    const data_tr4 = await axios.get(url_tr4).then((res) => { return res.data })
     // Data
     return {
       data_fv: data_fv,
       data_cn: data_cn,
       data_sp: data_sp,
-      data_hk: data_hk,
+      data_tr1: data_tr1,
+      data_tr2: data_tr2,
+      data_tr3: data_tr3,
+      data_tr4: data_tr4,
     }
   },
   mounted() {

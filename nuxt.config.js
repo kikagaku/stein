@@ -1,4 +1,4 @@
-const base_url = 'http://localhost:3000'
+const base_url = 'https://test-dllab-jdla-2020.dllab.ai'
 
 export default {
   mode: 'universal',
@@ -39,7 +39,6 @@ export default {
     script: [
       { src: 'https://code.jquery.com/jquery-2.2.4.min.js', integrity: 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin: 'anonymous' },
       { src: `${base_url}/js/modaal.min.js` },
-      { src: `${base_url}/js/common.js` },
     ],
   },
   /*
@@ -78,5 +77,9 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  // ビルド後のフォルダ名
+  generate: {
+    dir: 'docs'
   }
 }

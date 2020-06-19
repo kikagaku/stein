@@ -237,7 +237,7 @@ a:hover {
   width: 100%; }
 .first-view .fv-title {
   color: #043a5e;
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   margin-top: 30px;
   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif; }
@@ -456,7 +456,7 @@ a:hover {
   padding: 60px 20px;
   background: url(~assets/img/speakers_icon.png) no-repeat top 20px center; }
 .speakers .speaker-list {
-  width: 1080px;
+  width: 720px;
   margin-top: 40px; }
 @media screen and (max-width: 1024px) {
   .speakers .speaker-list {
@@ -589,7 +589,7 @@ a:hover {
   font-size: 18px;
   text-align: center;
   font-weight: bold;
-  width: 257px;
+  width: 230px;
   padding: 10px 0;
   text-align: center; }
 .time-table .track-seed li:nth-child(1) {
@@ -599,8 +599,7 @@ a:hover {
 .time-table .track-seed li:nth-child(3) {
   background: #4291c7; }
 .time-table .track-seed li:nth-child(4) {
-  background: #5cabe1;
-  width: 150px; }
+  background: #5cabe1; }
 .time-table .track-seed li + li {
   margin-left: 1px; }
 .time-table .track-detail {
@@ -636,7 +635,7 @@ a:hover {
 .time-table .track-detail .session {
   color: #fff;
   font-size: 18px;
-  width: 257px;
+  width: 230px;
   background: #eaf0f4;
   position: relative; }
 .time-table .track-detail .session a {
@@ -650,12 +649,14 @@ a:hover {
   color: #fff;
   letter-spacing: 1px;
   font-weight: 700; }
-.time-table .track-detail .session .technology {
-  background: #b488bd; }
-.time-table .track-detail .session .case-study {
-  background: #438bbb; }
-.time-table .track-detail .session .enablement {
-  background: #55b7b8; }
+.time-table .track-detail .session .track1 {
+  background: #206493; }
+.time-table .track-detail .session .track2 {
+  background: #2c76a9; }
+.time-table .track-detail .session .track3 {
+  background: #4291c7; }
+.time-table .track-detail .session .track4 {
+  background: #5cabe1; }
 .time-table .track-detail .session .session-title {
   font-size: 13.8px;
   color: #011d30;
@@ -680,7 +681,7 @@ a:hover {
 .time-table .track-detail .none {
   display: none; }
 .time-table .track-detail .one-line {
-  width: 773px;
+  width: 924px;
   text-align: center;
   padding: 5px 20px; }
 .time-table .track-detail .one-line .session-title {
@@ -1256,7 +1257,7 @@ a:hover {
   background: #fff;
   padding: 5px 0; }
 .event-booth .event-booth-list li .company-icon img {
-  max-width: 180px;
+  max-width: 150px;
   height: auto; }
 @media screen and (max-width: 768px) {
   .event-booth .event-booth-list li .company-icon img {

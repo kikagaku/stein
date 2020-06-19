@@ -17,13 +17,14 @@
       </ul>
       <p class="concept-logo">
         <img src="~assets/img/concept_logo.png" alt="">
+        <img src="~assets/img/concept_logo.png" alt="">
       </p>
-      <h3 class="committee-concept">
+      <!-- <h3 class="committee-concept">
         <span v-html='data.コンセプト'></span>
-      </h3>
-      <p class="committee-concept-descript">
+      </h3> -->
+      <!-- <p class="committee-concept-descript">
         <span v-html='data.説明'></span>
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

@@ -9,12 +9,6 @@
           <a href="#time-table">TIME TABLE</a>
         </li>
         <li>
-          <a href="#booth-sponsor">BOOTH SPONSOR</a>
-        </li>
-        <li>
-          <a href="#member">DLLAB DAY プログラム委員会</a>
-        </li>
-        <li>
           <a href="#overview">OVERVIEW</a>
         </li>
         <li>
