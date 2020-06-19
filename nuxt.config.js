@@ -1,4 +1,4 @@
-const base_url = 'https://test-dllab-jdla-2020.dllab.ai'
+const base_url = 'https://szxwsv2jlweeye7fhn4vfiisyr0yeokf.dllab.ai'
 
 export default {
   mode: 'universal',
