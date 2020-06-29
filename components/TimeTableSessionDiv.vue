@@ -1,6 +1,6 @@
 <template>
   <div :id='item.id' class="none modal-wrapper">
-    <p class="session-tag tracka">{{item.track}}</p>
+    <p class="session-tag">{{item.track}}</p>
     <div class="flex-space-between">
       <div class="datetime-modal">
         <div class="datetime-inner">

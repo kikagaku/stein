@@ -12,7 +12,11 @@
       :data_tr2='data_tr2'
       :data_tr3='data_tr3'
       :data_tr4='data_tr4' />
-    <!-- <time-table-sp /> -->
+    <time-table-sp
+      :data_tr1='data_tr1'
+      :data_tr2='data_tr2'
+      :data_tr3='data_tr3'
+      :data_tr4='data_tr4' />
     <attention />
     <!-- <booth-sponsor /> -->
     <!-- <member /> -->
