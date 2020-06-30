@@ -9,7 +9,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'DEEP LEARNING LAB | DLLAB DAY 2020',
+    title: 'Deep Learning Digital Conference | Deep Learning Lab',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -18,26 +18,26 @@ export default {
       { name: 'googlebot', content: 'noindex' },
       { name: 'keywords', content: '機械学習,ディープラーニング,人工知能,セミナー,コミュニティ' },
       { name: 'description', content: '深層学習の実用化に向けて研究・事例・テクノロジーの全てを知るカンファレンス' },
-      { property: 'og:title', content: 'DLLAB DAY 2018 深層学習を使いこなす日' },
+      { property: 'og:title', content: 'Deep Learning Digital Conference | New Normal で求められる AI の役割とは' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://jdla-2020.dllab.ai' },
+      { property: 'og:url', content: `${base_url}` },
       { property: 'og:description', content: '深層学習の実用化に向けて研究・事例・テクノロジーの全てを知るカンファレンス'},
-      { property: 'og:image', content: 'https://jdla-2020.dllab.ai/ogp.png' },
+      { property: 'og:image', content: `${base_url}/ogp.png` },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:description', content: '深層学習の実用化に向けて研究・事例・テクノロジーの全てを知るカンファレンス' },
-      { name: 'twitter:title', content: 'DLLAB DAY 2018 深層学習を使いこなす日' },
+      { name: 'twitter:title', content: 'New Normal で求められる AI の役割とは | New Normal で求められる AI の役割とは' },
       { name: 'twitter:site', content: '@deep_larning_lab_inc' },
       { name: 'twitter:creator', content: '@deep_larning_lab_inc' },
-      { name: 'twitter:image', content: 'https://jdla-2020.dllab.ai/ogp.png' }
+      { name: 'twitter:image', content: `${base_url}/ogp.png }`
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' },
-      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' }
+      { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css' }
 
     ],
     script: [
-      { src: 'https://code.jquery.com/jquery-2.2.4.min.js', integrity: 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin: 'anonymous' },
+      { src: '//code.jquery.com/jquery-2.2.4.min.js', integrity: 'sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin: 'anonymous' },
       { src: `${base_url}/js/modaal.min.js` },
     ],
   },
