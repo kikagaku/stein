@@ -9,12 +9,12 @@
           <li>{{item}}</li>
         </template>
       </ul>
-      <h3 class="catchcopy-sub">業種一覧</h3>
+      <!-- <h3 class="catchcopy-sub">業種一覧</h3>
       <ul class="industry flex-space-between">
         <template v-for='item in data.業種.split(",")'>
           <li>{{item}}</li>
         </template>
-      </ul>
+      </ul> -->
       <p class="concept-logo">
         <img src="~assets/img/concept_logo.png" alt="">
         <img src="~assets/img/concept_logo.png" alt="">
