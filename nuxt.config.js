@@ -28,7 +28,7 @@ export default {
       { name: 'twitter:title', content: 'New Normal で求められる AI の役割とは | New Normal で求められる AI の役割とは' },
       { name: 'twitter:site', content: '@deep_larning_lab_inc' },
       { name: 'twitter:creator', content: '@deep_larning_lab_inc' },
-      { name: 'twitter:image', content: `${base_url}/ogp.png }`
+      { name: 'twitter:image', content: `${base_url}/ogp.png }` }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
